@@ -15,11 +15,12 @@
     import { html, render } from 'lit';
     import '../circle-button-fj.js';
 
-    const title = 'Hello owc World!';
+    const title = 'Hello World!';
+    const link = 'https://www.psu.edu'
     //Update this with new attributes
     render(
       html`
-        <circle-button-fj .title=${title}>
+        <circle-button-fj .title=${title} .link=${link}>
           some light-dom
         </circle-button-fj>
       `,
