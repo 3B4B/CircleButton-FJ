@@ -1,6 +1,10 @@
 import { html, css, LitElement } from 'lit';
 
 export class CircleButtonFj extends LitElement {
+  
+  //Update so button is somehow a circle
+  //Colors
+  //CSS Vars
   static get styles() {
     return css`
       :host {
@@ -15,6 +19,9 @@ export class CircleButtonFj extends LitElement {
     return {
       title: { type: String },
       counter: { type: Number },
+      //remove counter
+      //add link
+      //add icon
     };
   }
 
@@ -22,12 +29,17 @@ export class CircleButtonFj extends LitElement {
     super();
     this.title = 'Hey there';
     this.counter = 5;
+    //update with text, icon, and link
   }
 
+  //Remove this vvvv
   __increment() {
     this.counter += 1;
   }
+  //Add onclick function
 
+
+// <a> tag wrapping a span
   render() {
     return html`
       <h2>${this.title} Nr. ${this.counter}!</h2>
