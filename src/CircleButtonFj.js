@@ -18,9 +18,7 @@ export class CircleButtonFj extends LitElement {
   static get properties() {
     return {
       title: { type: String },
-      counter: { type: Number },
-      //remove counter
-      //add link
+      link: {type: String}
       //add icon
     };
   }
@@ -28,22 +26,23 @@ export class CircleButtonFj extends LitElement {
   constructor() {
     super();
     this.title = 'Hey there';
-    this.counter = 5;
-    //update with text, icon, and link
+    this.link = "https://www.psu.edu";
+    //update icon
   }
 
-  //Remove this vvvv
-  __increment() {
-    this.counter += 1;
-  }
   //Add onclick function
-
+  __clickButton(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+  }
 
 // <a> tag wrapping a span
   render() {
     return html`
-      <h2>${this.title} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
+      <a href=${this.link}>
+        <span>${this.title}</span>
+      </a>
     `;
   }
 }
