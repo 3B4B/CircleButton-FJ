@@ -40,7 +40,7 @@ export class CircleButtonFj extends LitElement {
 // <a> tag wrapping a span
   render() {
     return html`
-      <a href=${this.link}>
+      <a href=${this.link} rel="noopener" alt="${this.title} button">
         <span>${this.title}</span>
       </a>
     `;
