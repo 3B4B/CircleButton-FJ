@@ -11,6 +11,7 @@ export class CircleButtonFj extends LitElement {
         display: block;
         padding: 25px;
         color: var(--circle-button-fj-text-color, #000);
+        background-color: red;
       }
     `;
   }
@@ -40,7 +41,7 @@ export class CircleButtonFj extends LitElement {
 // <a> tag wrapping a span
   render() {
     return html`
-      <a href=${this.link} rel="noopener" alt="${this.title} button">
+      <a href=${this.link} rel="noopener">
         <span>${this.title}</span>
       </a>
     `;
