@@ -11,8 +11,38 @@ export class CircleButtonFj extends LitElement {
         display: block;
         padding: 25px;
         color: var(--circle-button-fj-text-color, #000);
-        background-color: red;
       }
+
+      :host([dark-mode]) {
+
+      }
+
+      :host([high-contrast]) {
+        
+      }
+
+      a {
+        background-color:#44c767;
+        border-radius:28px;
+        border:1px solid #18ab29;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Times New Roman;
+        font-size:17px;
+        font-weight:bold;
+        padding:16px 31px;
+        text-decoration:none;
+      }
+      a:hover {
+        background-color:#5cbf2a;
+      }
+      a:active {
+        position:relative;
+        top:1px;
+      }
+
+      
     `;
   }
 
@@ -41,8 +71,8 @@ export class CircleButtonFj extends LitElement {
 // <a> tag wrapping a span
   render() {
     return html`
-      <a href=${this.link} rel="noopener">
-        <span>${this.title}</span>
+      <a href=${this.link} tabindex="-1" rel="noopener">
+        <button>${this.title}</button>
       </a>
     `;
   }
