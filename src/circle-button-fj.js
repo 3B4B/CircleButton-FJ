@@ -52,7 +52,8 @@ export class CircleButtonFj extends LitElement {
     return {
       title: {type: String},
       link: {type: String},
-      icon: {type: String}
+      icon: {type: String},
+      diabled: {type: Boolean, reflect: true}
     };
   }
 
@@ -60,7 +61,7 @@ export class CircleButtonFj extends LitElement {
     super();
     this.title = 'Hey there';
     this.link = "https://www.psu.edu";
-    this.icon = "save"
+    this.icon = null;
   }
 
   //Add onclick function
@@ -74,7 +75,9 @@ export class CircleButtonFj extends LitElement {
   render() {
     return html`
       <a href=${this.link} tabindex="-1" rel="noopener">
-        <button><simple-icon-lite icon=${this.icon}></simple-icon-lite>${this.title}</button>
+        <button>
+        ${this.icon ? html `<simple-icon-lite icon=${this.icon}></simple-icon-lite>`: ``}
+        ${this.title}</button>
       </a>
     `;
   }

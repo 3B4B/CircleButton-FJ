@@ -12,7 +12,7 @@
           "name": "circle-button-fj",
           "declaration": {
             "name": "CircleButtonFj",
-            "module": "/src/CircleButtonFj.js"
+            "module": "/src/circle-button-fj.js"
           }
         }
       ]
@@ -34,7 +34,7 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/CircleButtonFj.js",
+      "path": "src/circle-button-fj.js",
       "declarations": [
         {
           "kind": "class",
@@ -43,7 +43,12 @@
           "members": [
             {
               "kind": "method",
-              "name": "__increment"
+              "name": "__clickButton",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
             },
             {
               "kind": "field",
@@ -57,13 +62,30 @@
             },
             {
               "kind": "field",
-              "name": "counter",
+              "name": "link",
               "type": {
-                "text": "number"
+                "text": "string"
               },
-              "default": "5",
+              "default": "\"https://www.psu.edu\"",
               "privacy": "public",
-              "attribute": "counter"
+              "attribute": "link"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "privacy": "public",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "diabled",
+              "privacy": "public",
+              "attribute": "diabled",
+              "reflects": true
             }
           ],
           "attributes": [
@@ -72,8 +94,16 @@
               "fieldName": "title"
             },
             {
-              "name": "counter",
-              "fieldName": "counter"
+              "name": "link",
+              "fieldName": "link"
+            },
+            {
+              "name": "icon",
+              "fieldName": "icon"
+            },
+            {
+              "name": "diabled",
+              "fieldName": "diabled"
             }
           ],
           "superclass": {
@@ -90,7 +120,7 @@
           "name": "CircleButtonFj",
           "declaration": {
             "name": "CircleButtonFj",
-            "module": "src/CircleButtonFj.js"
+            "module": "src/circle-button-fj.js"
           }
         }
       ]
