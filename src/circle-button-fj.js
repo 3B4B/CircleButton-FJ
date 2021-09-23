@@ -1,4 +1,6 @@
 import { html, css, LitElement } from 'lit';
+import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
+import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 export class CircleButtonFj extends LitElement {
   
@@ -48,9 +50,9 @@ export class CircleButtonFj extends LitElement {
 
   static get properties() {
     return {
-      title: { type: String },
-      link: {type: String}
-      //add icon
+      title: {type: String},
+      link: {type: String},
+      icon: {type: String}
     };
   }
 
@@ -58,7 +60,7 @@ export class CircleButtonFj extends LitElement {
     super();
     this.title = 'Hey there';
     this.link = "https://www.psu.edu";
-    //update icon
+    this.icon = "save"
   }
 
   //Add onclick function
@@ -72,7 +74,7 @@ export class CircleButtonFj extends LitElement {
   render() {
     return html`
       <a href=${this.link} tabindex="-1" rel="noopener">
-        <button>${this.title}</button>
+        <button><simple-icon-lite icon=${this.icon}></simple-icon-lite>${this.title}</button>
       </a>
     `;
   }
