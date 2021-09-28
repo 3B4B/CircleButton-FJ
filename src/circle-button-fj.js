@@ -17,6 +17,10 @@ export class CircleButtonFj extends LitElement {
         
       }
 
+      .ctaButton:disabled{
+        cursor: not-allowed;
+      }
+
       :host([high-contrast]) {
         
       }
@@ -98,7 +102,7 @@ export class CircleButtonFj extends LitElement {
       title: {type: String},
       link: {type: String},
       icon: {type: String},
-      diabled: {type: Boolean, reflect: true},
+      disabled: {type: Boolean, reflect: true},
       description: {type: String}, 
       contrast: {type: Boolean, reflect: true}, 
       darkMode: {type: Boolean, reflect: true},
@@ -111,6 +115,7 @@ export class CircleButtonFj extends LitElement {
     this.description = 'Take me there'
     this.link = "https://www.psu.edu";
     this.icon = null;
+    this.disabled = false;
   }
 
   //Add onclick function
@@ -123,8 +128,8 @@ export class CircleButtonFj extends LitElement {
 // <a> tag wrapping a span
   render() {
     return html`
-      <a href=${this.link} tabindex="-1" rel="noopener">
-        <button>
+      <a class="ctaButton" href=${this.link} tabindex="-1" rel="noopener">
+        <button class="ctaButton" ?disabled="${this.disabled}">
           ${this.icon ? html `<simple-icon-lite icon=${this.icon}></simple-icon-lite>`: ``}
           <br>
           <span>${this.title}</span> 
