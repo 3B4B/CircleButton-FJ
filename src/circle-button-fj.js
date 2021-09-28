@@ -1,7 +1,7 @@
 import { html, css, LitElement } from 'lit';
 import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
 import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
-
+//https://dev.to/cicciosgamino/dark-theme-on-litelement-app-32a3
 export class CircleButtonFj extends LitElement {
   
   //Update so button is somehow a circle
@@ -10,88 +10,67 @@ export class CircleButtonFj extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: block;
-        padding: 25px;
+        display: inline; 
         color: var(--circle-button-fj-text-color, #000);
-        border-radius: 30%; 
-        
       }
-
+      
       .ctaButton:disabled{
         cursor: not-allowed;
       }
-
-      :host([high-contrast]) {
-        
+      
+      :host([contrast]) {
+        --bk-color: #000000;
+        --font-color: #39FF14;
+        --secondary-font-color: #83EEFF;
+              
       }
 
-      a[dark-mode]{
-        background-color: #000000;
-        border-radius: 100%; 
-        border:2px solid #FFFFFF;
-      
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      :host([dark]){
+        --bk-color: #000000;
+        --font-color: #FFFFFF;
+      }
 
-        display:inline-block;
-        cursor:pointer;
-
-        color:#ffffff;
-        
-        text-decoration:none;
-        
-        
-        height: 70px; 
-        width: 70px; 
-
+      :host:not([dark]) {
+        --bk-color: #FFFFFF;
+        --font-color: #000000;
       }
 
       a {
-        background-color: #FFFFFF;
+        background-color: var(--bk-color);
         border-radius: 100%; 
         border:2px solid #000000;
-      
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
         display:inline-block;
         cursor:pointer;
+ 
+        height: 80px; 
+        width: 80px; 
 
-        color:#ffffff;
-        
-        text-decoration:none;
-        
-        
-        height: 70px; 
-        width: 70px; 
+        color: var(--font-color);
 
 
       }
       a:hover {
-        background-color: #e0e0e0;
-        border: 4px solid #e0e0e0;
+      
+        border: 2.5px solid #000000;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        font-weight:bold;
       }
       a:active {
-        background-color: #e0e0e0;
-        border: 6px solid #e0e0e0;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        font-weight:bold;
-
+        border: 3px solid #000000;
       }       
       button {
         border: none; 
         background-color: transparent;
         font-family: "Courier New", monospace;
         font-size: small; 
-
-        
-
+        color: var(--font-color);
       }
       span {
         font-family: "Andale Mono", monospace; 
         font-weight: 1000;
         font-size: large;  
-      
+        color: var(--secondary-font-color);
       }
       
     `;
@@ -105,7 +84,7 @@ export class CircleButtonFj extends LitElement {
       disabled: {type: Boolean, reflect: true},
       description: {type: String}, 
       contrast: {type: Boolean, reflect: true}, 
-      darkMode: {type: Boolean, reflect: true},
+      dark: {type: Boolean, reflect: true},
     };
   }
 
@@ -113,9 +92,10 @@ export class CircleButtonFj extends LitElement {
     super();
     this.title = 'Yes';
     this.description = 'Take me there'
-    this.link = "https://www.psu.edu";
+    this.link = "https://blog.hubspot.com/marketing/call-to-action-examples";
     this.icon = null;
     this.disabled = false;
+    this.dark = false; 
   }
 
   //Add onclick function
