@@ -40,5 +40,7 @@ Properties - API We can Use Design considerations
  -[ ] Create a different style for when high constrast, dark mode, or normal is applied to tag
  -[ ] Styling and functional disabeled state
 
+ ##In class 9/27 Comparing to Grey Goose
+
 
  
