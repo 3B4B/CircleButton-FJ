@@ -13,7 +13,11 @@ export class CircleButtonFj extends LitElement {
         display: inline; 
         color: var(--circle-button-fj-text-color, #000);
       }
-
+      
+      .ctaButton:disabled{
+        cursor: not-allowed;
+      }
+      
       :host([contrast]) {
         --bk-color: #000000;
         --font-color: #39FF14;
@@ -77,7 +81,7 @@ export class CircleButtonFj extends LitElement {
       title: {type: String},
       link: {type: String},
       icon: {type: String},
-      diabled: {type: Boolean, reflect: true},
+      disabled: {type: Boolean, reflect: true},
       description: {type: String}, 
       contrast: {type: Boolean, reflect: true}, 
       dark: {type: Boolean, reflect: true},
@@ -90,6 +94,7 @@ export class CircleButtonFj extends LitElement {
     this.description = 'Take me there'
     this.link = "https://blog.hubspot.com/marketing/call-to-action-examples";
     this.icon = null;
+    this.disabled = false;
     this.dark = false; 
   }
 
@@ -103,8 +108,8 @@ export class CircleButtonFj extends LitElement {
 // <a> tag wrapping a span
   render() {
     return html`
-      <a href=${this.link} tabindex="-1" rel="noopener">
-        <button>
+      <a class="ctaButton" href=${this.link} tabindex="-1" rel="noopener">
+        <button class="ctaButton" ?disabled="${this.disabled}">
           ${this.icon ? html `<simple-icon-lite icon=${this.icon}></simple-icon-lite>`: ``}
           <br>
           <span>${this.title}</span> 
