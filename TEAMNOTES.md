@@ -40,7 +40,32 @@ Properties - API We can Use Design considerations
  -[ ] Create a different style for when high constrast, dark mode, or normal is applied to tag
  -[ ] Styling and functional disabeled state
 
- ##In class 9/27 Comparing to Grey Goose
+ ## In class 9/27 Comparing to Grey Goose
+Write 2 things that are similar in your implementations
+* Both of our teams have the hover feature working
+* Both of our teams had unessary code that needed cleaned up
+
+
+Write 2 things that are different in your implementations
+* The Grey Goose team had also styled the host page (in their demo file)
+* They do not give the end user the ability to change the icon 
+
+List a code snippet or approach you plan on leveraging from their solution
+```
+<style>
+    body {
+      background: #000000;
+    }
+    
+  </style>
+</head>
+<body>
+  <img src="https://cdn.luxe.digital/media/2020/11/24150129/grey-goose-vodka-bottle-price-size-review-luxe-digital%402x.jpg" alt="Grey Goose Bottle" style="width:100%;">
+  <div id="demo"></div>
+  
+  ```
+  We can leverage this to make our demo more interesting. 
+
 
 
  
