@@ -17,6 +17,9 @@ export class CircleButtonFj extends LitElement {
       .ctaButton:disabled{
         cursor: not-allowed;
       }
+      a:disabled{
+        background-color: #9494b8;
+      }
       
       :host([contrast]) {
         --bk-color: #000000;
