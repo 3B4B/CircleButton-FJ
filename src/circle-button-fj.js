@@ -93,7 +93,7 @@ export class CircleButtonFj extends LitElement {
   constructor() {
     super();
     this.title = 'Yes';
-    this.description = 'Take me there'
+    this.description = ''
     this.link = "https://blog.hubspot.com/marketing/call-to-action-examples";
     this.icon = null;
     this.disabled = false;

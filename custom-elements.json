@@ -56,9 +56,19 @@
               "type": {
                 "text": "string"
               },
-              "default": "'Hey there'",
+              "default": "'Yes'",
               "privacy": "public",
               "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Take me there'",
+              "privacy": "public",
+              "attribute": "description"
             },
             {
               "kind": "field",
@@ -66,7 +76,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "\"https://www.psu.edu\"",
+              "default": "\"https://blog.hubspot.com/marketing/call-to-action-examples\"",
               "privacy": "public",
               "attribute": "link"
             },
@@ -82,9 +92,31 @@
             },
             {
               "kind": "field",
-              "name": "diabled",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
               "privacy": "public",
-              "attribute": "diabled",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "dark",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "privacy": "public",
+              "attribute": "dark",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "contrast",
+              "privacy": "public",
+              "attribute": "contrast",
               "reflects": true
             }
           ],
@@ -102,8 +134,20 @@
               "fieldName": "icon"
             },
             {
-              "name": "diabled",
-              "fieldName": "diabled"
+              "name": "disabled",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "description",
+              "fieldName": "description"
+            },
+            {
+              "name": "contrast",
+              "fieldName": "contrast"
+            },
+            {
+              "name": "dark",
+              "fieldName": "dark"
             }
           ],
           "superclass": {

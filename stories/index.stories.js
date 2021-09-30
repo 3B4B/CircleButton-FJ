@@ -15,14 +15,11 @@ export default {
   },
 };
 
-function Template({ title = 'Hello world', counter = 5, textColor, slot }) {
+function Template({ title = 'Hello world', disabled = false, contrast = false, dark=false, icon="", link="" }) {
   return html`
     <circle-button-fj
-      style="--circle-button-fj-text-color: ${textColor || 'black'}"
-      .title=${title}
-      .counter=${counter}
+      .title=${title} .disabled=${disabled} .contrast=${contrast} .dark=${dark} .icon=${icon} .link=${link}
     >
-      ${slot}
     </circle-button-fj>
   `;
 }
