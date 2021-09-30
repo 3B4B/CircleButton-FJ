@@ -3,7 +3,7 @@ import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
 import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 //https://dev.to/cicciosgamino/dark-theme-on-litelement-app-32a3
 export class CircleButtonFj extends LitElement {
-  
+
   //Update so button is somehow a circle
   //Colors
   //CSS Vars
@@ -80,13 +80,13 @@ export class CircleButtonFj extends LitElement {
 
   static get properties() {
     return {
-      title: {type: String},
-      link: {type: String},
-      icon: {type: String},
-      disabled: {type: Boolean, reflect: true},
-      description: {type: String}, 
-      contrast: {type: Boolean, reflect: true}, 
-      dark: {type: Boolean, reflect: true},
+      title: { type: String },
+      link: { type: String },
+      icon: { type: String },
+      disabled: { type: Boolean, reflect: true },
+      description: { type: String },
+      contrast: { type: Boolean, reflect: true },
+      dark: { type: Boolean, reflect: true },
     };
   }
 
@@ -97,28 +97,36 @@ export class CircleButtonFj extends LitElement {
     this.link = "https://blog.hubspot.com/marketing/call-to-action-examples";
     this.icon = null;
     this.disabled = false;
-    this.dark = false; 
+    this.dark = false;
   }
 
   //Add onclick function
   __clickButton(e) {
     e.preventDefault();
-    e.stopPropagation();
-    e.stopImmediatePropagation();
+    let audio = new Audio(new URL(`airhorn.mp3`, import.meta.url).href);
+    audio.play();
+    audio.onended = () => {
+      window.open(this.link, '_blank', 'noopener');
+    }
   }
 
-// <a> tag wrapping a span
+  // <a> tag wrapping a span
   render() {
     return html`
-      <a class="ctaButton" href=${this.link} tabindex="-1" rel="noopener">
-        <button class="ctaButton" ?disabled="${this.disabled}">
-          ${this.icon ? html `<simple-icon-lite icon=${this.icon}></simple-icon-lite>`: ``}
-          <br>
-          <span>${this.title}</span> 
-          <br>
-          ${this.description}
-        </button>
-      </a>
+    
+
+  <a @click="${this.__clickButton}" class="ctaButton" href=${this.link} tabindex="-1" rel="noopener">
+      <button class="ctaButton" ?disabled="${this.disabled}">
+        ${this.icon ? html`<simple-icon-lite icon=${this.icon}></simple-icon-lite>` : ``}
+        <br>
+        <span>${this.title}</span>
+        <br>
+        ${this.description}
+      </button>
+  </a>
+
+
+ 
     `;
   }
 }
