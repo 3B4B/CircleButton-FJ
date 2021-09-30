@@ -14,8 +14,10 @@ export class CircleButtonFj extends LitElement {
         color: var(--circle-button-fj-text-color, #000);
       }
       
-      .ctaButton:disabled{
+      :host([disabled]){
         cursor: not-allowed;
+        pointer-events: none;
+        --bk-color: #ff0000;
       }
       
       :host([contrast]) {
@@ -63,13 +65,13 @@ export class CircleButtonFj extends LitElement {
         border: none; 
         background-color: transparent;
         font-family: "Courier New", monospace;
-        font-size: small; 
+        font-size: small;
         color: var(--font-color);
       }
       span {
         font-family: "Andale Mono", monospace; 
         font-weight: 1000;
-        font-size: large;  
+        font-size: small;  
         color: var(--secondary-font-color);
       }
       
