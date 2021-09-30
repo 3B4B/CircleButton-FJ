@@ -15,7 +15,7 @@
   <br><br><circle-button-fj title="YES" link="https://www.psu.edu" description= "Take me there!"></circle-button-fj>
   <br><br><circle-button-fj dark=true></circle-button-fj>
   <br><br><circle-button-fj contrast=true></circle-button-fj>
-  <br><br><circle-button-fj></circle-button-fj>
+  <br><br><circle-button-fj disabled title="I'm disabled"></circle-button-fj>
 
 
 
@@ -23,18 +23,6 @@
     import { html, render } from 'lit';
     import '../circle-button-fj.js';
 
-
-
-    
-    //Update this with new attributes
-    render(
-      html`
-        <circle-button-fj .title=${title} .link=${link}>
-          some light-dom
-        </circle-button-fj>
-      `,
-      document.querySelector('#demo')
-    );
   </script>
 </body>
 </html>
