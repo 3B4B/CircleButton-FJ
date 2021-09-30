@@ -1,8 +1,6 @@
 import { html, css, LitElement } from 'lit';
 import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
 import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
-import "@lrnwebcomponents/air-horn/air-horn.js";
-
 //https://dev.to/cicciosgamino/dark-theme-on-litelement-app-32a3
 export class CircleButtonFj extends LitElement {
 
