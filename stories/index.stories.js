@@ -6,8 +6,12 @@ export default {
   component: 'circle-button-fj',
   argTypes: {
     title: { control: 'text' },
-    counter: { control: 'number' },
-    textColor: { control: 'color' },
+    link: { control: 'text' },
+    icon: { control: 'text' },
+    disabled: { control: 'boolean' },
+    description: { control: 'text' },
+    contrast:{ control: 'boolean' },
+    dark: { control: 'boolean' },
   },
 };
 
