@@ -1,8 +1,6 @@
 import { html, css, LitElement } from 'lit';
 import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
 import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
-import "@lrnwebcomponents/air-horn/air-horn.js";
-
 //https://dev.to/cicciosgamino/dark-theme-on-litelement-app-32a3
 export class CircleButtonFj extends LitElement {
   
@@ -112,10 +110,7 @@ export class CircleButtonFj extends LitElement {
 // <a> tag wrapping a span
   render() {
     return html`
-    
- 
-    <a class="ctaButton" href=${this.link} tabindex="-1" rel="noopener">
-    
+      <a class="ctaButton" href=${this.link} tabindex="-1" rel="noopener">
         <button class="ctaButton" ?disabled="${this.disabled}">
           ${this.icon ? html `<simple-icon-lite icon=${this.icon}></simple-icon-lite>`: ``}
           <br>
@@ -123,10 +118,7 @@ export class CircleButtonFj extends LitElement {
           <br>
           ${this.description}
         </button>
-    
       </a>
-
- 
     `;
   }
 }
