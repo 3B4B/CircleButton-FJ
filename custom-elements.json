@@ -66,7 +66,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "'Take me there'",
+              "default": "''",
               "privacy": "public",
               "attribute": "description"
             },
@@ -175,19 +175,11 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "Regular"
+          "name": "FullCustom"
         },
         {
           "kind": "variable",
           "name": "CustomTitle"
-        },
-        {
-          "kind": "variable",
-          "name": "CustomCounter"
-        },
-        {
-          "kind": "variable",
-          "name": "SlottedContent"
         }
       ],
       "exports": [
@@ -200,9 +192,9 @@
         },
         {
           "kind": "js",
-          "name": "Regular",
+          "name": "FullCustom",
           "declaration": {
-            "name": "Regular",
+            "name": "FullCustom",
             "module": "stories/index.stories.js"
           }
         },
@@ -211,22 +203,6 @@
           "name": "CustomTitle",
           "declaration": {
             "name": "CustomTitle",
-            "module": "stories/index.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "CustomCounter",
-          "declaration": {
-            "name": "CustomCounter",
-            "module": "stories/index.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "SlottedContent",
-          "declaration": {
-            "name": "SlottedContent",
             "module": "stories/index.stories.js"
           }
         }
